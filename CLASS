@@ -1,0 +1,45 @@
+class Batiment {
+    constructor(adresse, prix, superficie) {
+        this.adresse = adresse;
+        this.prix = prix;
+        this.superficie = superficie;
+    }
+
+    getAdresse() {
+        return this.adresse;
+    }
+
+    getPrix() {
+        return this.prix;
+    }
+
+    getSuperficie() {
+        return this.superficie;
+    }
+
+    setAdresse(adresse) {
+        this.adresse = adresse;
+    }
+
+    setPrix(prix) {
+        if (prix >= 0) {
+            this.prix = prix;
+        } else {
+            console.error("Le prix ne peut pas être négatif");
+        }
+    }
+
+    setSuperficie(superficie) {
+        if (superficie >= 0) {
+            this.superficie = superficie;
+        } else {
+            console.error("La superficie ne peut pas être négative");
+        }
+    }
+
+    afficher() {
+        console.log(`Adresse: ${this.adresse}`);
+        console.log(`Prix: ${this.prix}`);
+        console.log(`Superficie: ${this.superficie}`);
+    }
+}
